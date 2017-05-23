@@ -1,11 +1,8 @@
 ## Script to install Python 2.7 and OpenCV 3.0 on Ubuntu 16.04 x64
 ### Created for educational and personal purpose
 
-Download bash script
-
-```
-wget https://github.com/sebacollado/install-python27-opencv300/blob/master/install-python27-opencv30.sh
-```
+Download project from
+https://github.com/sebacollado/install-python27-opencv300.git
 
 Execute it
 
