@@ -18,6 +18,7 @@ then
 	exit
 fi
 
+cd ~
 echo "-- Updating repositories"
 sudo apt-get update && sudo apt-get -y upgrade
 echo "-- Installing libraries"
