@@ -33,8 +33,9 @@ sudo python get-pip.py
 sudo pip install virtualenv virtualenvwrapper
 sudo rm -rf ~/.cache/pip
 echo "-- Preparing virtualenv"
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+echo '# virtualenv and virtualenvwrapper' >> ~/.bashrc
+echo 'export WORKON_HOME=$HOME/.virtualenvs' >> ~/.bashrc
+echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
 source ~/.bashrc
 mkvirtualenv cv
 echo "-- Installing python2.7"
@@ -46,6 +47,12 @@ cd ~
 git clone https://github.com/opencv/opencv.git
 cd opencv
 git checkout 3.0.0
+echo "-- Downloading OpenCV 3.0.0 contrib"
+cd ~
+git clone https://github.com/Itseez/opencv_contrib.git
+cd opencv_contrib
+git checkout 3.0.0
+echo "-- Preparing build"
 cd ~/opencv
 mkdir build
 cd build
